@@ -25,8 +25,8 @@ void Intro()
 
     int temp;
 
-    m = readFile( m , "OldMistyInfo.txt" );
-    r = readFile( r , "OldRosmalaiInfo.txt" );
+    m = readFile( m , "OldMistyInfo.bin" );
+    r = readFile( r , "OldRosmalaiInfo.bin" );
 
     while(1){
 
@@ -48,11 +48,11 @@ void Intro()
         {
         case MISTY:
                 m = CellProduct( m , "Misty" );
-                WriteFile( m , "OldMistyInfo.txt" );
+                WriteFile( m , "OldMistyInfo.bin" );
             break;
         case ROSMALAI:
                 r = CellProduct( r , "Rosmalai" );
-                WriteFile( r , "OldRosmalaiInfo.txt" );
+                WriteFile( r , "OldRosmalaiInfo.bin" );
 
             break;
         case 3:
@@ -76,7 +76,7 @@ void Intro()
             case BACK:
                 break;
             case PreviousAllUpdats:
-                readFileCashier( "AllUpdateinfo.txt" );
+                readFileCashier( "AllUpdateinfo.bin" );
                 break;
 
             }
@@ -112,11 +112,11 @@ void Intro()
             switch(temp)
             {
             case 1: //Total
-                readFileForTotal( "AllSellinfo.txt" );
+                readFileForTotal( "AllSellinfo.bin" );
                 break;
             case 2: //All
                 cout << "\n== Main -> All Transaction -> All ==\n";
-                readFileCashier( "AllSellinfo.txt" );
+                readFileCashier( "AllSellinfo.bin" );
             }
                 break;
             case 6:
